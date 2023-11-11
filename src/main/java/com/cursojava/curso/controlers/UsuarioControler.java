@@ -44,18 +44,11 @@ public class UsuarioControler {
     }
 
 
+    @PostMapping(value = "api/usuarios")
+    public void registrarUsuario(@RequestBody Usuario usuario){
+        impletensUsuarioDao.registrar(usuario);
+    }
 
-//    @RequestMapping(value = "usuario123123")
-//    public List<Usuario> buscar(){
-//        Usuario usuario = new Usuario();
-//        usuario.setNombre("lucas");
-//        usuario.setApellido("martinengui");
-//        usuario.setEmail("loco@gmail.com");
-//        usuario.setPassword("123123");
-//
-//        return ;
-//
-//    }
 
 
 }

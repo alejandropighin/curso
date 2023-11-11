@@ -3,10 +3,7 @@ package com.cursojava.curso.dao;
 
 import com.cursojava.curso.models.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 
@@ -30,5 +27,10 @@ public class ImpletensUsuarioDao {
 
     public void deleteUser(Long id) {
         usuarioDao.deleteById(id);
+    }
+
+
+    public void registrar(Usuario usuario) {
+        usuarioDao.save(usuario);
     }
 }
